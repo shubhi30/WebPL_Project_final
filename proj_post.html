@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+
+<head>
+    <div class = title>
+    <link rel="stylesheet" type="text/css" href="proj_post.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <h1 >
+    What are you Listening to?
+    </h1>
+    <br>
+
+</div>
+   
+</head>
+
+<body class = body>
+
+   
+    <div class="sidenav">
+        <div class = propic>
+            <img src="pic3.png" alt="Italian Trulli" width="50px" height="50px" class= pro>
+            <span class = description>
+               
+            </span>
+        </div> 
+        <div id = "links">
+        <!-- <a href="proj_homepage.html">For You</a>
+        <a href="proj_personalpage.html">Profile</a>
+        <a href="#">Create New Post</a> -->
+        </div>
+
+        <div class = setting>
+            Settings
+        </div>
+        <div class = privacy>
+            Privacy
+        </div>
+            
+      </div>
+
+
+
+      <div class="sidenav2">
+          <div class = Right-nav-content>
+            What are you Feeling?
+          </div>
+        
+          <div>
+            <select class="genres">
+            <option value="" disabled selected hidden>Choose a Genre</option>
+            <option value="Today's Hits">Today's Hits</option>
+            <option value="Chill">Chill</option>
+            <option value="Sad Boy Hours">Sad Boy Hours</option>
+            <option value="Rager">Rager</option>
+            <option value="Indie">Indie</option>
+
+            </select>
+        </div>
+
+        <div class = "trend">
+            Trending now...
+             <div class = sptop50>
+                <iframe src="https://open.spotify.com/embed/playlist/37i9dQZEVXbLRQDuF5jeBp" width="270" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+             </div>
+        </div>
+
+
+        
+      </div>
+
+      <!-- center form content -->
+<div class = form>
+<form onsubmit = "return !!(val_name()& val_link() & val_vibe()) ">
+  <div class = "input">
+    <label>
+      Song Name: 
+    </label>
+    <input type= "text"  name = "song_name" id = "song_name">
+    <span class = "error" id= "song_name-note">
+</span>
+</div>
+<div  class = "input">
+    <label>
+        Song Link: 
+      </label>
+      <input type= "text"  name = "song_link" id = "song_link">
+      <span class = "error" id= "song_link-note">
+    </span>
+    </div>
+    <div class = "input"> 
+    <label>
+      Song Vibe: 
+    </label>
+    <input type= "text"  name = "song_vibe" id= "song_vibe">
+    <span class = "error" id= "song_vibe-note">
+    </span>
+</div>
+<div class = "input">
+    <label>
+      Comments:
+    </label>
+   <textarea  name = "comments" id = "comments"></textarea>
+</div>
+<!-- <button class = "btn-primary" type = "submit"> -->
+<input type= "submit" value = "submit" class= "btn">
+<input type= "delete" value = "delete" class= "btn" onclick ="alert('Your Post has been deleted!')">
+ 
+
+</form>
+</div>
+
+      
+</body>
+
+<!-- Javascript for Form Validation and Delete Post Alert (arrow function) -->
+
+<script>
+    window.onload = document.getElementById("links").innerHTML= '<a href="proj_homepage.html">For You</a><br/><a href="proj_personalpage.html">Profile</a><br/><a href="#">Create New Post</a> ';
+   
+    document.getElementById("song_name");
+    document.getElementById("song_link");
+    document.getElementById("song_vibe");
+
+    function val_name(){
+      if(document.getElementById("song_name").value === ""){
+          document.getElementById("song_name").focus();
+          document.getElementById("song_name-note").innerHTML = "Please enter a song name";
+          return false;
+        }
+        else{
+          document.getElementById("song_name").innerHTML = "";
+          return true;
+        }
+    }
+
+    function val_link(){
+      if (document.getElementById("song_link").value === ""){
+            document.getElementById("song_link").focus();
+            document.getElementById("song_link-note").innerHTML = "Please enter a song link"
+            return false;
+    }
+    else{
+      document.getElementById("song_link").innerHTML = "";
+      return true;
+    }
+    }
+
+    function val_vibe(){
+      if (document.getElementById("song_vibe").value === ""){
+            document.getElementById("song_vibe").focus();
+            document.getElementById("song_vibe-note").innerHTML = "Please enter a song vibe";
+            return false;
+
+        }else{
+          document.getElementById("song_vibe").innerHTML = "";
+          return true;
+        }
+    }
+
+     const al = () => () => alert("Your past has been deleted!");
+  
+  </script>
+
+</html>

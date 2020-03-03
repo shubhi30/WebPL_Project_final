@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+
+<head>
+  <div class = title>
+  <link rel="stylesheet" type="text/css" href="proj_personalpage.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+   <!-- profile page title  -->
+  <h1 >
+  Your Profile
+  </h1>
+</div>
+ 
+</head>
+
+<body class = body>
+
+<!-- Left Side Nav Bar -->
+  <div class="sidenav">
+      <div class = propic>
+          <img src="pic3.png" width="50px" height="50px" class= pro>
+      </div> 
+      <div id = "links">
+        <!-- <a href="proj_homepage.html">For You</a>
+        <a href="proj_personalpage.html">Profile</a>
+        <a href="#">Create New Post</a> -->
+        </div>
+      <div class = setting>
+          Settings
+      </div>
+      <div class = privacy>
+          Privacy
+      </div> 
+    </div>
+
+<!-- Right Side Nav Bar  -->
+    <div class="sidenav2">
+        <div class = Right-nav-content>
+          What are you Feeling?
+        </div>
+      
+        <div>
+          <select class="genres">
+          <option value="" disabled selected hidden>Choose a Genre</option>
+          <option value="Today's Hits">Today's Hits</option>
+          <option value="Chill">Chill</option>
+          <option value="Sad Boy Hours">Sad Boy Hours</option>
+          <option value="Rager">Rager</option>
+          <option value="Indie">Indie</option>
+
+          </select>
+      </div>
+
+      <div class = "trend">
+          Trending now...
+          <div class = sptop50>
+            <iframe id= "ply" src="https://open.spotify.com/embed/playlist/37i9dQZEVXbLRQDuF5jeBp" width="270" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+         </div>
+          
+      </div>    
+
+  </div>
+
+   <!-- Center Section of the Body  -->
+   
+
+   <div class="tab" >
+      <button class="tablinks" onclick="typeOfPost(event, 'Your Posts')" id ="defaultOpen">Your Posts</button>
+      <button class="tablinks" onclick="typeOfPost(event, 'Your Likes')">Your Likes</button>
+       
+  </div>
+
+    <!-- Tab content -->
+    <div id="Your Posts" class="tabcontent" >
+      <br/>
+      <button id="total_posts">Check # of Total Posts</button>
+      <p id="demo"></p>
+      <!-- Sample Personal Post:
+       -Each post includes a user's name, song title, follow button according to the artist of the song, song preview play linked from Spotify, a vibe, and a comments box 
+      -->
+     <div class = display_post>
+      <div class = "card">
+      <div class = "card-body">
+          <div class = left_side_post>
+      <label>
+          <h2> Malvika  </h2>
+      </label>
+      <br/>
+      <label class = vibe_display>
+          <h4 style="color:#0D98B8;"> It's A Vibe </h4>
+          <iframe src="https://open.spotify.com/follow/1/?uri=spotify:artist:17lzZA2AlOHwCwFALHttmp?si=bIkq77DNRZiYwCsXFnn6fQ&size=detail&theme=light" width="300" height="56" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
+          <h5> Vibe: Rager </h5>
+      </label>
+      <div class = "card-comment">
+          <h6> <p> Mix of rager and chill, good driving song, kind of outdated because it came out during high school but I still listen to it I guess? </p> </h6>
+      </div>
+      </div>
+      <div class = song_display>
+          <iframe src="https://open.spotify.com/embed/track/6H0AwSQ20mo62jGlPGB8S6" width="270" height="350" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      </div>
+  </div>
+  </div>
+  </div>
+    </div>
+    
+    <div id="Your Likes" class="tabcontent">
+
+      <!-- Sample Liked Post:
+       -Each post includes a user's name, song title, follow button according to the artist of the song, song preview play linked from Spotify, a vibe, and a comments box 
+      -->
+
+      <br/>
+      <br/>
+      <br/>
+     <div class = display_post>
+      <div class = "card">
+      <div class = "card-body">
+          <div class = left_side_post>
+      <label>
+          <h2> Shubhi </h2>
+      </label>
+      <br/>
+      <label class = vibe_display>
+          <h4 style="color:#0D98B8;"> Truth Is </h4>
+          <iframe src="https://open.spotify.com/follow/1/?uri=spotify:artist:30DhU7BDmF4PH0JVhu8ZRg&size=detail&theme=light" width="300" height="56" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
+          <h5> Vibe: Sad Boy Hours </h5>
+      </label>
+      <div class = "card-comment">
+          <h6> <p> Lovee her voice, different than others and music isn't too much. Also check out Problem With You by her too </p> </h6>
+      </div>
+      </div>
+      <div class = song_display>
+          <iframe src="https://open.spotify.com/embed/track/2AAL4PF8WtOgHKHajUBbwh" width="270" height="350" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      </div>
+  </div>
+  </div>
+  </div>    
+    </div>
+
+
+    <!-- JavaScript -->
+    
+    <script>
+
+      // Javascript for Site Navigation
+      window.onload = document.getElementById("links").innerHTML= '<a href="proj_homepage.html">For You</a><br/><a href="#">Profile</a><br/><a href="proj_post.html">Create New Post</a>';
+   
+
+   //Javascript for Tabs Bar 
+    function typeOfPost(event, pick) {
+
+      var i, tabcontent, tablinks;
+    
+      // Get all elements with class="tabcontent" and hide them
+      tabcontent = document.getElementsByClassName("tabcontent");
+       for (i = 0; i < tabcontent.length; i++) {
+         tabcontent[i].style.display = "none";
+       }
+      
+      // Get all elements with class="tablinks" and remove the class "active"
+      tablinks = document.getElementsByClassName("tablinks");
+      
+      
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      
+      // Show the current tab, and add an "active" class to the button that opened the tab
+      document.getElementById(pick).style.display = "block";
+      event.currentTarget.className += " active";
+    }
+
+  //Event Listener Function
+  document.getElementById("total_posts").addEventListener("click", total);
+  function total() {
+  var x = 1;
+  document.getElementById("demo").innerHTML = "You Have Posted " + x + " Posts";
+  }    
+  </script>
+          
+</body>
+
+</html>

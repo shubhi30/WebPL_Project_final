@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+
+<head>
+    <div class = title id = "title">
+    <link rel="stylesheet" type="text/css" href="proj_homepage.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- homepage title  -->
+    <h1 >
+    For You
+    </h1>
+</div>
+   
+</head>
+
+<!-- Sample Posts that will be displayed on the feed:
+    -Each post includes a user's name, song title, follow button according to the artist of the song, song preview play linked from Spotify, a vibe, and a comments box 
+-->
+<body class = body>
+    <div class = display_post>
+        <div class = "card">
+        <div class = "card-body">
+            <div class = left_side_post>
+        <label>
+            <h2> Malvika  </h2>
+        </label>
+        <br/>
+        <label class = vibe_display>
+            <h4 style="color:#0D98B8;"> It's A Vibe </h4>
+            <iframe src="https://open.spotify.com/follow/1/?uri=spotify:artist:17lzZA2AlOHwCwFALHttmp?si=bIkq77DNRZiYwCsXFnn6fQ&size=detail&theme=light" width="300" height="56" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
+            <h5> Vibe: Rager </h5>
+        </label>
+        <div class = "card-comment">
+            <h6> <p> Mix of rager and chill, good driving song, kind of outdated because it came out during high school but I still listen to it I guess? </p> </h6>
+        </div>
+        </div>
+        <div class = song_display>
+            <iframe src="https://open.spotify.com/embed/track/6H0AwSQ20mo62jGlPGB8S6" width="270" height="350" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+    </div>
+    </div>
+    </div>
+    
+    <br/>
+    <br/>
+    
+    <!-- temp post 2 -->
+    <div class = display_post>
+        <div class = "card">
+        <div class = "card-body">
+            <div class = left_side_post>
+        <label>
+            <h2> Shubhi </h2>
+        </label>
+        <br/>
+        <label class = vibe_display>
+            <h4 style="color:#0D98B8;"> Truth Is </h4>
+            <iframe src="https://open.spotify.com/follow/1/?uri=spotify:artist:30DhU7BDmF4PH0JVhu8ZRg&size=detail&theme=light" width="300" height="56" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
+            <h5> Vibe: Sad Boy Hours </h5>
+        </label>
+        <div class = "card-comment">
+            <h6> <p> Lovee her voice, different than others and music isn't too much. Also check out Problem With You by her too </p> </h6>
+        </div>
+        </div>
+        <div class = song_display>
+            <iframe src="https://open.spotify.com/embed/track/2AAL4PF8WtOgHKHajUBbwh" width="270" height="350" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+    </div>
+    </div>
+    </div>
+
+<!-- Side Navigation Bars for Left and Right
+    - left: includes user, and site navigation links (For You, Your Profile, Create New Post)
+    - right: includes a trending now music playlist shuffler
+ -->  
+
+   <!--  Left Nav Bar -->
+    <div class="sidenav">
+        <div class = propic>
+          <img src="pic3.png" " width="50px" height="50px" class= pro>
+        </div> 
+            <div id = "links">
+            <!-- <a href = "#" >  For You </a>
+            <a href = "proj_personalpage.html"> Your Posts </a>
+            <a href = "proj_post.html"> Create a Poast</a> -->
+        </div>
+   
+        <div class = setting>
+            Settings
+        </div>
+        <div class = privacy>
+            Privacy 
+        </div>
+            
+      </div>
+
+     <!--  Right Nav Bar -->
+      <div class="sidenav2">
+          <div class = Right-nav-content>
+            What are you Feeling?
+          </div>
+        
+          <div>
+            <select class="genres" id = "genre">
+            <option value="" disabled selected hidden>Choose a Genre</option>
+            <option value="Today's Hits">Today's Hits</option>
+            <option value="Chill" >Chill</option>
+            <option value="Sad Boy Hours">Sad Boy Hours</option>
+            <option value="Rager">Rager</option>
+            <option value="Indie">Indie</option>
+
+            </select>
+        </div>
+        <div class = "trend">
+            Trending now...
+
+             <div class = sptop50>
+                <iframe id= "play" src="https://open.spotify.com/embed/playlist/37i9dQZEVXbLRQDuF5jeBp" width="270" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+             </div>
+        </div>     
+    </div >
+    
+</body>
+
+<!-- // function playlist(){
+//     var play = 'src="https://open.spotify.com/embed/playlist/37i9dQZEVXbLRQDuF5jeBp" width="270" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"';
+//     var test = document.getElementById("genre").value;
+//     //document.getElementById("playlist").innerHTML = play;
+// //var val = test.options[test.selectedIndex].text;
+//     console.log(test);
+//     if(test === "Today's Hits"){
+//         document.getElementById("play").innerHTML = src="https://open.spotify.com/embed/playlist/37i9dQZEVXbLRQDuF5jeBp" width="270" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media";
+//     }  
+// } -->
+
+<!-- Javascript for Site Navigation  -->
+<script>
+    // window.onload = function(){ alert("Hello! Weclcome to our page!");}
+    window.onload = document.getElementById("links").innerHTML='<a href = "#" >  For You </a> <br/> <a href = "proj_personalpage.html"> Your Profile </a> <br/><a href = "proj_post.html"> Create a Post</a>';
+</script>
+
+</html>

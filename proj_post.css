@@ -1,0 +1,166 @@
+/* Post Page CSS */
+
+.title { 
+  display: inline-block;
+  margin-left: 28%;
+  margin-top: 3%;
+  color: white;
+  font-size: 25px;
+  font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+}
+
+.body{
+  background-color: #101123
+}
+.pro{
+  
+  margin-left: 11%;
+  margin-top:18%;
+}
+
+.description{
+   margin-bottom: 6%;
+   color: white;
+   font-size: 20px;
+   font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+}
+.sidenav {
+  border-radius: 0px 25px 25px 0px;
+  height: 100%; 
+  width: 350px; 
+  position: fixed; 
+  z-index: 10; 
+  top: 0; 
+  left: 0;
+  background-color:#2E314F; 
+  overflow-x: hidden; 
+  padding-top: 20px;
+  
+}
+
+/* The Navigation Links */
+.sidenav a {
+  padding: 15px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #F172A1;
+  z-index: 10;
+  opacity: 100;
+  position: relative;
+  display: block;
+  font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+  margin-left:7%;
+  margin-top: 3%;
+  
+}
+
+/* Navigation Links Hover */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/*Settings and Privacy Additions */
+.setting{
+  margin-left: 13%;
+  margin-top : 147%;
+  color: white;
+  font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+
+}
+.privacy{
+  margin-left: 13%;
+  margin-top: 3%;
+  color: white;
+  font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+}
+
+/* Right Side Navigation Bar */
+.sidenav2 {
+  border-radius: 25px 0px 0px 25px;
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 350px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  right: 0;
+  background-color:#2E314F;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+}
+
+.Right-nav-content{
+  margin-top: 21%;
+  margin-bottom: 8%;
+  color: white;
+  font-size: 26px;
+  text-align: center;
+  font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+}
+.genres{
+  margin-left: 90px;
+  width: 50%;
+  border: 3px solid #F172A1;
+  padding: 10px;
+  height:36px;
+  line-height: 30px;
+  font-size: 16px;
+  font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+}
+
+.trend{
+  color: white;
+  margin-top: 20%;
+  margin-left: 13%;
+  text-align: left;
+
+  font-size: 26px;
+  font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+}
+.sptop50 {
+margin-top:7%
+}
+
+
+/* Middle Content */
+.main {
+margin-left: 160px; 
+padding: 0px 10px;
+z-index: -1;
+position: relative;
+
+}
+
+/* Post Form Styling */
+
+.post_form{
+margin-left: 25%;
+margin-right: 25%;
+border-radius: 25px;
+background-color: white;
+}
+
+.form{
+margin-left: 28%;
+margin-right: 30%;
+display: block;
+background-color: white;
+font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+border-radius: 25px;
+}
+.input{
+padding-top: 10px;
+margin-left: 5%;
+border-radius: 25px;
+}
+
+.btn{
+margin-left: 5%;
+margin-bottom: 4%; 
+}
+
+/* Form Errors */
+.error{
+color: red;
+}
+
+
